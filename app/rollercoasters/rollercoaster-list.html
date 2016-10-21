@@ -1,0 +1,62 @@
+<div class="rollercoaster-list mdl-layout mdl-js-layout has-drawer is-upgraded">
+    <main class="mdl-layout__content">
+        <div class="rollercoaster-list__box mdl-grid">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+                <div class="mdl-card__title mdl-color-text--grey-50">
+                    <h3>Ben jij groot genoeg?</h3>
+                </div>
+                <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+                    <h5 style="text-align: center">{{sliderValue}} cm</h5>
+                    <div>
+                        <input class="mdl-slider mdl-js-slider" type="range"
+                               min="0" max="250"
+                        [value]="sliderValue"
+                        (input)="sliderValue = $event.target.value">
+                    </div>
+                </div>
+                <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+                    <table class="rollercoaster-list__table mdl-data-table mdl-js-data-table">
+                        <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">
+                                Park
+                            </th>
+                            <th class="mdl-data-table__cell--non-numeric">
+                                Rollercoaster
+                            </th>
+                            <th>
+                                Minimale Lengte (begeleid)
+                            </th>
+                            <th>
+                                Minimale Lengte
+                            </th>
+                            <th>
+                                Maximale Lengte
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="#rollercoaster of rollercoasters">
+                            <td class="mdl-data-table__cell--non-numeric">
+                                {{rollercoaster.parkName}}
+                            </td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                <strong>{{rollercoaster.rollercoasterName}}</strong>
+                            </td>
+                            <td>
+                                {{rollercoaster.rollercoasterRiderMinHeight}} cm
+                            </td>
+                            <td>
+                                {{rollercoaster.rollercoasterRiderSoloMinHeight}} cm
+                            </td>
+                            <td>
+                                {{rollercoaster.rollercoasterRiderMaxHeight}} cm
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

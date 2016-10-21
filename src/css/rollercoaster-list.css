@@ -1,0 +1,56 @@
+.rollercoaster-layout-header {
+    background: url('/assets/images/header-rollercoasters.jpg');
+}
+
+.rollercoaster-layout-header .mdl-layout__header,
+.rollercoaster-layout-header .mdl-layout__drawer-button {
+    color: white;
+}
+
+.rollercoaster-list .rollercoaster-list__box {
+    max-width: 900px;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-shrink: 0;
+}
+
+.rollercoaster-list.mdl-layout .mdl-layout__content {
+    padding-top: 120px;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+.rollercoaster-list .mdl-card__media {
+    box-sizing: border-box;
+    background-size: cover;
+    padding: 0 24px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.rollercoaster-list .mdl-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 240px;
+}
+
+.rollercoaster-list .rollercoaster-list__table {
+    margin: 0 auto;
+}
+
+.rollercoaster-list .mdl-card__supporting-text {
+    width: auto;
+}
+
+
+.rollercoaster-list .mdl-card__title {
+    padding: 0 16px;
+    flex-grow: 1;
+    background-color: #263238;
+}
